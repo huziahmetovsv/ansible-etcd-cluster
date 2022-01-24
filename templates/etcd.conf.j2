@@ -2,8 +2,8 @@
 ETCD_NAME="{{inventory_hostname_short}}"
 ETCD_DATA_DIR="{{etcd_cluster_data_dir}}"
 #ETCD_SNAPSHOT_COUNTER="10000"
-ETCD_HEARTBEAT_INTERVAL="200"
-ETCD_ELECTION_TIMEOUT="2000"
+ETCD_HEARTBEAT_INTERVAL="{{ etcd_heartbeat_interval }}"
+ETCD_ELECTION_TIMEOUT="{{ etcd_election_timeout }}"
 {% if etcd_iface_public == 'all' %}
 {% set client_endpoints = [ etcd_listen_public ] %}
 {% else %}

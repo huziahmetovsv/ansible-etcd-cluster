@@ -26,3 +26,6 @@ etcd_launch: True
 etcd_enable_v2: True # Accept etcd V2 client requests
 
 etcd_additional_envvars: {}
+
+etcd_heartbeat_interval: "100"
+etcd_election_timeout: "500"
